@@ -1,14 +1,16 @@
 public class Device {
-    String deviceName;
-    boolean isOn;
-    int power;
+    private String deviceName;
+    private boolean isOn;
+    private int power;
+
+    public Device(String deviceName, int power) {
+        this.deviceName = deviceName;
+        this.isOn = false;
+        this.power = power;
+    }
 
     public String getDeviceName() {
         return deviceName;
-    }
-
-    public void setDeviceName(String deviceName) {
-        this.deviceName = deviceName;
     }
 
     public boolean getIsOn() {
@@ -30,15 +32,20 @@ public class Device {
     public void setPower(int power) {
         this.power = power;
     }
-
-    public static void main(String[] args) {
-        Device lamp = new Device();
-        Device conditioner = new Device();
-        lamp.setPower(100);
-        conditioner.setPower(1500);
-        lamp.turnOn();
-        conditioner.turnOff();
+    public int getCurrPower (){
+        return isOn ? power : 0;
     }
 
+    public static void main(String[] args) {
+        Device lamp = new Device("Lamp", 100);
+        Device conditioner = new Device("Conditioner", 1500);
 
+        lamp.turnOn();
+        conditioner.turnOn();
+        lamp.turnOff();
+        int consumption = lamp.getCurrPower() + conditioner.getCurrPower();
+        System.out.println("Lamps isOn: " + lamp.getIsOn());
+        System.out.println("Conditioner isOn: " + conditioner.getIsOn());
+        System.out.println("Total consumption: " + consumption + " Watts");
+    }
 }
