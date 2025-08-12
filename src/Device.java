@@ -30,9 +30,15 @@ public class Device {
     public void setPower(int power) {
         this.power = power;
     }
-    Device lamp = new Device();
-    Device conditioner = new Device();
-    lamp.setPower(100);
-    conditioner.setPower(1500);
+
+    public static void main(String[] args) {
+        Device lamp = new Device();
+        Device conditioner = new Device();
+        lamp.setPower(100);
+        conditioner.setPower(1500);
+        lamp.turnOn();
+        conditioner.turnOff();
+    }
+
 
 }
