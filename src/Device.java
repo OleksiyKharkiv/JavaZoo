@@ -44,8 +44,8 @@ public class Device {
         conditioner.turnOn();
         lamp.turnOff();
         int consumption = lamp.getCurrPower() + conditioner.getCurrPower();
-        System.out.println("Lamps isOn: " + lamp.getIsOn());
-        System.out.println("Conditioner isOn: " + conditioner.getIsOn());
+        System.out.println("Lamps is: " + (lamp.isOn ? "[ON]" : "[OFF]"));
+        System.out.println("Conditioner is: " + (conditioner.isOn ? "[ON]" : "[OFF]"));
         System.out.println("Total consumption: " + consumption + " Watts");
     }
 }
