@@ -13,7 +13,7 @@ public class PowerGrid {
         }
         return totalPower;
     }
-    public int getMostPowerfullDevId (List<Device> devices){
+    public int getMostPowerfulDevId (List<Device> devices){
         int maxPowerId = 0;
         int maxPower = devices.get(0).getCurrPower();
         int left = 0;
@@ -35,7 +35,7 @@ public class PowerGrid {
     public void checkSafety (){
         if (getTotalPower() > MAX_POWER){
             while (getTotalPower() > MAX_POWER){
-                Device device = devices.get(getMostPowerfullDevId(devices));
+                Device device = devices.get(getMostPowerfulDevId(devices));
                  device.turnOff();
             }
         }
