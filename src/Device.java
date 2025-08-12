@@ -34,10 +34,12 @@ public class Device {
     public void setPower(int power) {
         this.power = power;
     }
-    public int getCurrPower (){
+
+    public int getCurrPower() {
         return isOn ? power : 0;
     }
-    public boolean updateSafety(boolean isSafe){
+
+    public boolean updateSafety(boolean isSafe) {
         return isSafe;
     }
 }

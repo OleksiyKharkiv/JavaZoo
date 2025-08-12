@@ -18,8 +18,6 @@ public class Main {
 
         for (Device dev : devList) {
             System.out.println(dev.getDeviceName() + " is " + (dev.getIsOn() ? "on" : "off"));
-
         }
-
     }
 }

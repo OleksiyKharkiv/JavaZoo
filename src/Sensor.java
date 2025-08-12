@@ -3,6 +3,7 @@ public class Sensor {
     private int deviceId;
     private String sensorName;
     private String sensorType;
+
     public Sensor(int deviceId, String sensorName, String sensorType) {
         this.deviceId = deviceId;
         this.sensorName = sensorName;
@@ -12,17 +13,20 @@ public class Sensor {
     public int getId() {
         return id;
     }
+
     public int getDeviceId() {
         return deviceId;
     }
+
     public String getSensorName() {
         return sensorName;
     }
+
     public String getSensorType() {
         return sensorType;
     }
-    public boolean checkSafety(){
+
+    public boolean checkSafety() {
         return true;
     }
-
 }
