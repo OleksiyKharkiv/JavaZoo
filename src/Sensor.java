@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Sensor {
     private int id;
     private int deviceId;
@@ -27,6 +29,6 @@ public class Sensor {
     }
 
     public boolean checkSafety() {
-        return true;
+        return new Random().nextInt(100) >90;
     }
 }

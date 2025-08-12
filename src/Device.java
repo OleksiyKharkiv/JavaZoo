@@ -9,6 +9,7 @@ public class Device {
         this.deviceName = deviceName;
         this.isOn = false;
         this.power = power;
+        this.isSafe = true;
     }
 
     public String getDeviceName() {
@@ -40,6 +41,7 @@ public class Device {
     }
 
     public boolean updateSafety(boolean isSafe) {
+        this.isSafe =  isSafe;
         return isSafe;
     }
 }

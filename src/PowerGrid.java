@@ -1,7 +1,11 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class PowerGrid {
     private List<Device> devices;
+    public PowerGrid(){
+        this.devices = new ArrayList<>();
+    }
     private final int MAX_POWER = 3000;
     public void addDevice(Device device){
         devices.add(device);
