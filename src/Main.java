@@ -1,15 +1,25 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Device lamp = new Device("Lamp", 100);
+        Device conditioner = new Device("Conditioner", 1500);
+        Device kettle = new Device("Kettle", 1000);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        lamp.turnOn();
+        conditioner.turnOn();
+        kettle.turnOn();
+
+        List<Device> devList = new ArrayList<>();
+        devList.add(lamp);
+        devList.add(conditioner);
+        devList.add(kettle);
+
+        for (Device dev : devList) {
+            System.out.println(dev.getDeviceName() + " is " + (dev.getIsOn() ? "on" : "off"));
+
         }
+
     }
 }

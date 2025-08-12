@@ -1,6 +1,8 @@
 public class Device {
-    private String deviceName;
+    private int id;
+    private final String deviceName;
     private boolean isOn;
+    private boolean isSafe;
     private int power;
 
     public Device(String deviceName, int power) {
@@ -35,17 +37,7 @@ public class Device {
     public int getCurrPower (){
         return isOn ? power : 0;
     }
-
-    public static void main(String[] args) {
-        Device lamp = new Device("Lamp", 100);
-        Device conditioner = new Device("Conditioner", 1500);
-
-        lamp.turnOn();
-        conditioner.turnOn();
-        lamp.turnOff();
-        int consumption = lamp.getCurrPower() + conditioner.getCurrPower();
-        System.out.println("Lamps is: " + (lamp.isOn ? "[ON]" : "[OFF]"));
-        System.out.println("Conditioner is: " + (conditioner.isOn ? "[ON]" : "[OFF]"));
-        System.out.println("Total consumption: " + consumption + " Watts");
+    public boolean updateSafety(boolean isSafe){
+        return isSafe;
     }
 }
