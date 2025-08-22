@@ -29,6 +29,6 @@ public class Sensor {
     }
 
     public boolean checkSafety() {
-        return new Random().nextInt(100) >90;
+        return new Random().nextInt(100) > 90;
     }
 }
