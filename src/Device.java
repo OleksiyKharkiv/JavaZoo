@@ -41,7 +41,7 @@ public class Device {
     }
 
     public boolean updateSafety(boolean isSafe) {
-        this.isSafe =  isSafe;
+        this.isSafe = isSafe;
         return isSafe;
     }
 }
