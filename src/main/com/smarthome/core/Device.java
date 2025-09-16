@@ -1,49 +1,16 @@
 package main.com.smarthome.core;
 
-public class Device {
-    private int id;
-    private final String deviceName;
-    private boolean isOn;
-    private boolean isSafe;
-    private int power;
+public interface Device {
+    String getId();
 
-    public Device(String deviceName, int power) {
-        this.deviceName = deviceName;
-        this.isOn = false;
-        this.power = power;
-        this.isSafe = true;
-    }
+    String getName();
 
-    public String getDeviceName() {
-        return deviceName;
-    }
+    void turnOn();
 
-    public boolean getIsOn() {
-        return isOn;
-    }
+    void turnOff();
 
-    public void turnOn() {
-        this.isOn = true;
-    }
+    boolean getIsOn();
 
-    public void turnOff() {
-        this.isOn = false;
-    }
-
-    public int getPower() {
-        return power;
-    }
-
-    public void setPower(int power) {
-        this.power = power;
-    }
-
-    public int getCurrPower() {
-        return isOn ? power : 0;
-    }
-
-    public boolean updateSafety(boolean isSafe) {
-        this.isSafe = isSafe;
-        return isSafe;
-    }
+    int getCurrPower();
 }
+
