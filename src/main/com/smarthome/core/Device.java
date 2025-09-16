@@ -9,8 +9,9 @@ public interface Device {
 
     void turnOff();
 
-    boolean getIsOn();
+    boolean isOn();
 
-    int getCurrPower();
+    int getPowerConsumption();
+    int getCurrPowerConsumption();
 }
 

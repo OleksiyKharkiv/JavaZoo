@@ -2,31 +2,41 @@ package main.com.smarthome.devices;
 
 import main.com.smarthome.core.Device;
 
-public class AbstractDevice implements Device {
+public abstract class AbstractDevice implements Device {
     protected final String id;
     protected final String name;
+    protected final int powerConsumption;
     protected boolean isOn;
-    protected int currPower;
+
+    public AbstractDevice(String id, String name, boolean isOn, int powerConsumption) {
+        this.id = id;
+        this.name = name;
+        this.isOn = isOn;
+        this.powerConsumption = this.getPowerConsumption();
+    }
+
     @Override
     public String getId() {
         return id;
     }
+
     @Override
     public String getName() {
         return name;
     }
-    @Override
-    public void turnOn(){
-        isOn = false;
-    };
 
     @Override
-    public void turnOff() {
-         isOn = false;
+    public void turnOn() {
+        isOn = false;
     }
 
     @Override
-    public boolean getIsOn() {
+    public void turnOff() {
+        isOn = false;
+    }
+
+    @Override
+    public boolean isOn() {
         return isOn;
     }
 
@@ -35,9 +45,5 @@ public class AbstractDevice implements Device {
         return 0;
     }
 
-    public AbstractDevice (String id, String name, boolean isOn){
-        this.id = id;
-        this.name = name;
-        this.isOn = isOn;
-    }
+
 }
