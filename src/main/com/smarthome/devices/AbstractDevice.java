@@ -27,7 +27,7 @@ public abstract class AbstractDevice implements Device {
 
     @Override
     public void turnOn() {
-        isOn = false;
+        isOn = true;
     }
 
     @Override
@@ -41,8 +41,12 @@ public abstract class AbstractDevice implements Device {
     }
 
     @Override
-    public int getCurrPower() {
-        return 0;
+    public int getPowerConsumption() {
+        return powerConsumption;
+    }
+    @Override
+    public int getCurrPowerConsumption() {
+        return isOn ? powerConsumption : 0;
     }
 
 
