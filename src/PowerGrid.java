@@ -1,3 +1,5 @@
+import main.com.smarthome.core.Device;
+
 import java.util.ArrayList;
 import java.util.List;
 

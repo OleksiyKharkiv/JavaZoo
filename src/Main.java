@@ -1,3 +1,5 @@
+import main.com.smarthome.core.Device;
+
 import java.util.Random;
 
 public class Main {

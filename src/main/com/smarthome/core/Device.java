@@ -1,3 +1,5 @@
+package main.com.smarthome.core;
+
 public class Device {
     private int id;
     private final String deviceName;

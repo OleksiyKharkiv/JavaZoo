@@ -1,3 +1,5 @@
+package main.com.smarthome.devices;
+
 import java.util.Random;
 
 public class Sensor {
