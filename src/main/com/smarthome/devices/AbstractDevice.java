@@ -44,10 +44,9 @@ public abstract class AbstractDevice implements Device {
     public int getPowerConsumption() {
         return powerConsumption;
     }
+
     @Override
     public int getCurrPowerConsumption() {
         return isOn ? powerConsumption : 0;
     }
-
-
 }
