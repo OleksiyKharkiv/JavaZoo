@@ -12,6 +12,6 @@ public interface Device {
     boolean isOn();
 
     int getPowerConsumption();
+
     int getCurrPowerConsumption();
 }
-
