@@ -1,6 +1,6 @@
-package main.com.smarthome.devices;
+package com.smarthome.devices;
 
-import main.com.smarthome.core.Device;
+import com.smarthome.core.Device;
 
 public abstract class AbstractDevice implements Device {
     protected final String id;

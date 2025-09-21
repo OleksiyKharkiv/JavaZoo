@@ -1,6 +1,6 @@
-package main.com.smarthome.management;
+package com.smarthome.management;
 
-import main.com.smarthome.core.Device;
+import com.smarthome.core.Device;
 
 import java.util.ArrayList;
 import java.util.List;

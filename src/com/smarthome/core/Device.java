@@ -1,4 +1,4 @@
-package main.com.smarthome.core;
+package com.smarthome.core;
 
 public interface Device {
     String getId();

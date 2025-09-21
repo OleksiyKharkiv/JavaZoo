@@ -1,4 +1,4 @@
-package main.com.smarthome.devices;
+package com.smarthome.devices;
 
 public class SmartOutlet extends AbstractDevice {
     private boolean isOverloaded;

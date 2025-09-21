@@ -1,4 +1,4 @@
-package main.com.smarthome.devices;
+package com.smarthome.devices;
 
 public class SmartLight extends AbstractDevice {
     public SmartLight(String id, String name, boolean isOn, int powerConsumption) {
