@@ -6,7 +6,7 @@ public abstract class AbstractDevice implements Device {
     private final String id;
     private final String name;
     private final int powerConsumption;
-    private boolean isOn;
+    private boolean isOn = false;
 
     public AbstractDevice(String id, String name, boolean isOn, int powerConsumption) {
         this.id = id;
@@ -48,5 +48,15 @@ public abstract class AbstractDevice implements Device {
     @Override
     public int getCurrPowerConsumption() {
         return isOn ? powerConsumption : 0;
+    }
+
+    @Override
+    public String toString() {
+        return "AbstractDevice{" +
+                "id='" + getId() + '\'' +
+                ", name='" + getName() + '\'' +
+                ", isOn=" + isOn() +
+                ", powerConsumption=" + getPowerConsumption() +
+                '}';
     }
 }
