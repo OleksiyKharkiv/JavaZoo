@@ -15,7 +15,7 @@ public abstract class AbstractDevice implements Device {
         this.id = id;
         this.name = name;
         this.isOn = isOn;
-        this.powerConsumption = this.getPowerConsumption();
+        this.powerConsumption = powerConsumption;
     }
 
     @Override
