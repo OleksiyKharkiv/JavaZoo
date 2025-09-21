@@ -3,10 +3,10 @@ package com.smarthome.devices;
 import com.smarthome.core.Device;
 
 public abstract class AbstractDevice implements Device {
-    protected final String id;
-    protected final String name;
-    protected final int powerConsumption;
-    protected boolean isOn;
+    private final String id;
+    private final String name;
+    private final int powerConsumption;
+    private boolean isOn;
 
     public AbstractDevice(String id, String name, boolean isOn, int powerConsumption) {
         this.id = id;

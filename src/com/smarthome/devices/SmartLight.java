@@ -7,10 +7,10 @@ public class SmartLight extends AbstractDevice {
 
     public String toString() {
         return "SmartLight{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", isOn=" + isOn +
-                ", powerConsumption=" + powerConsumption +
+                "id='" + getId() + '\'' +
+                ", name='" + getName() + '\'' +
+                ", isOn=" + isOn() +
+                ", powerConsumption=" + getPowerConsumption() +
                 '}';
     }
 }

@@ -6,10 +6,10 @@ public class RegularDevice extends AbstractDevice{
     }
     public String toString(){
         return "RegularDevice{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", isOn=" + isOn +
-                ", powerConsumption=" + powerConsumption +
+                "id='" + getId() + '\'' +
+                ", name='" + getName() + '\'' +
+                ", isOn=" + isOn() +
+                ", powerConsumption=" + getPowerConsumption() +
                 '}';
     }
 }
