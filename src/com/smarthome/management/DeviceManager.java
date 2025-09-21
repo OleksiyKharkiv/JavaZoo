@@ -25,4 +25,12 @@ public class DeviceManager {
         }
     }
 
+    public void turnOffDeviceById(String id) {
+        for (Device device : devices) {
+            if (device.getId().equals(id)) {
+                device.turnOff();
+            }
+        }
+    }
+
 }
