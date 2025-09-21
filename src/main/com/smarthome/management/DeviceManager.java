@@ -1,4 +1,4 @@
-package main.com.smarthome.managment;
+package main.com.smarthome.management;
 
 import main.com.smarthome.core.Device;
 
