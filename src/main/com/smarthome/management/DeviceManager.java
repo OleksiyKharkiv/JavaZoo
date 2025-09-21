@@ -7,16 +7,19 @@ import java.util.List;
 
 public class DeviceManager {
     private final List<Device> devices = new ArrayList<>();
-    public void addDevice(Device device){
+
+    public void addDevice(Device device) {
         devices.add(device);
         System.out.println("Device added: " + device.getName());
     }
-    public List<Device> getDevices(){
+
+    public List<Device> getDevices() {
         return new ArrayList<>(devices);
     }
-    public void turnDeviceById(String id){
-        for (Device device: devices){
-            if (device.getId().equals(id)){
+
+    public void turnDeviceById(String id) {
+        for (Device device : devices) {
+            if (device.getId().equals(id)) {
                 device.turnOn();
             }
         }
