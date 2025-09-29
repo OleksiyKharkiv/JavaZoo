@@ -26,7 +26,7 @@ public class EnergyManager {
     public void autiDiableDevices() {
         Device maxDevice = null;
         for (Device device : devices) {
-            if (device.isOn() && (maxDevice == null || device.getCurrPowerConsumption() > maxDevice.getCurrPowerConsumption())
+            if (device.isOn() && (maxDevice == null || device.getCurrPowerConsumption() > maxDevice.getCurrPowerConsumption()))
             {
                 maxDevice = device;
             }
