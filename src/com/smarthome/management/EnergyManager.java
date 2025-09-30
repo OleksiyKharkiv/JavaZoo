@@ -4,14 +4,7 @@ import com.smarthome.core.Device;
 
 import java.util.List;
 
-public class EnergyManager {
-    private final List<Device> devices;
-    private final int maxGridPower;
-
-    public EnergyManager(List<Device> devices, int maxGridPower) {
-        this.devices = devices;
-        this.maxGridPower = maxGridPower;
-    }
+public record EnergyManager(List<Device> devices, int maxGridPower) {
 
     public int getCurrTotalPowerConsumption() {
         return devices.stream()
@@ -26,8 +19,7 @@ public class EnergyManager {
     public void autiDiableDevices() {
         Device maxDevice = null;
         for (Device device : devices) {
-            if (device.isOn() && (maxDevice == null || device.getCurrPowerConsumption() > maxDevice.getCurrPowerConsumption()))
-            {
+            if (device.isOn() && (maxDevice == null || device.getCurrPowerConsumption() > maxDevice.getCurrPowerConsumption())) {
                 maxDevice = device;
             }
         }
