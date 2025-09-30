@@ -6,7 +6,7 @@ public abstract class AbstractDevice implements Device {
     private final String id;
     private final String name;
     private final int powerConsumption;
-    private boolean isOn = false;
+    private boolean isOn;
 
     public AbstractDevice(String id, String name, boolean isOn, int powerConsumption) {
         if (id == null || id.isEmpty()) throw new IllegalArgumentException("Device id cannot be null or empty");
