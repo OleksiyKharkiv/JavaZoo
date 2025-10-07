@@ -6,6 +6,11 @@ import java.util.List;
 
 public record EnergyManager(List<Device> devices, int maxGridPower) {
 
+    public EnergyManager(List<Device> devices, int maxGridPower) {
+        this.devices = devices;
+        this.maxGridPower = maxGridPower;
+    }
+
     public int getCurrTotalPowerConsumption() {
         return devices.stream()
                 .mapToInt(Device::getCurrPowerConsumption)
@@ -16,7 +21,7 @@ public record EnergyManager(List<Device> devices, int maxGridPower) {
         return getCurrTotalPowerConsumption() > maxGridPower;
     }
 
-    public void autiDiableDevices() {
+    public void autoDiableDevices() {
         Device maxDevice = null;
         for (Device device : devices) {
             if (device.isOn() && (maxDevice == null || device.getCurrPowerConsumption() > maxDevice.getCurrPowerConsumption())) {
