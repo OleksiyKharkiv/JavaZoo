@@ -55,11 +55,6 @@ public abstract class AbstractDevice implements Device {
 
     @Override
     public String toString() {
-        return "AbstractDevice{" +
-                "id='" + getId() + '\'' +
-                ", name='" + getName() + '\'' +
-                ", isOn=" + isOn() +
-                ", powerConsumption=" + getPowerConsumption() +
-                '}';
+        return "AbstractDevice{" + "id='" + getId() + '\'' + ", name='" + getName() + '\'' + ", isOn=" + isOn() + ", powerConsumption=" + getPowerConsumption() + '}';
     }
 }
