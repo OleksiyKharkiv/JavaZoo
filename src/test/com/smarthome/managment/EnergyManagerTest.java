@@ -15,10 +15,7 @@ public class EnergyManagerTest {
     @Test
     void shouldDisableDevicesWhenGridOverloaded() {
         //Given
-        List<Device> devices = Arrays.asList(
-                new SmartOutlet("outlet1", "Outlet1", true, 2000),
-                new SmartOutlet("outlet2", "Outlet2", true, 1500)
-        );
+        List<Device> devices = Arrays.asList(new SmartOutlet("outlet1", "Outlet1", true, 2000), new SmartOutlet("outlet2", "Outlet2", true, 1500));
         EnergyManager energyManager = new EnergyManager(devices, 1200);
 
         //when
