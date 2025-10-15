@@ -12,9 +12,7 @@ public record EnergyManager(List<Device> devices, int maxGridPower) {
     }
 
     public int getCurrTotalPowerConsumption() {
-        return devices.stream()
-                .mapToInt(Device::getCurrPowerConsumption)
-                .sum();
+        return devices.stream().mapToInt(Device::getCurrPowerConsumption).sum();
     }
 
     public boolean isGridOverloaded() {
